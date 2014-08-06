@@ -1,9 +1,15 @@
 <?
 class login{
 
-	private $token="ChangeThisToken";
-	private $cookie="ChangeThisCookieName";
-	private $pass="1234";
+	private $token;
+	private $cookie;
+	private $pass;
+
+	public function __construct($token,$cookie,$pass){
+		$this->token = $token;
+		$this->cookie = $cookie;
+		$this->pass = $pass;	
+	}
 
 	public function login(){
 		if (isset($_POST['password'])){
